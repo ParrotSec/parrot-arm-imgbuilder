@@ -15,4 +15,7 @@ Parrot Security OS generic armhf image builder
   * run "make BLOCKDEVICE=/dev/BLOCK", where BLOCK is your block device
     an example: make BLOCKDEVICE=/dev/mmcblk0 or make BLOCKDEVICE=/dev/sdb
 
+* The script base is tuned to generate a raspberry pi image as an example,
+  feel free to customize it according to your necessities.
+
 All the source code is under GPLv3+ .
