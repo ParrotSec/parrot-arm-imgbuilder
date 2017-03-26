@@ -1,7 +1,7 @@
 Parrot Security OS generic armhf image builder
 
 * To build the image:
-  * install tar gzip xz-utils gdisk wget kpartx lvm2 dosfstools coreutils
+  * install tar gzip xz-utils gdisk wget kpartx lvm2 dosfstools coreutils make
   * put in the working directory a rootfs tarball of parrotsec
     from the parrot-arm-builder (https://github.com/ParrotSec/parrot-arm-builder)
     (according with the Makefile BASEIMG and BUILD_NUMBER)

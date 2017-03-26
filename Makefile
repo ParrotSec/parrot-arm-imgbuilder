@@ -7,7 +7,7 @@
 # You need superuser privileges.
 
 BUILD_NUMBER=1
-BASEIMG=parrotsec-3.4-armhf-raspberry
+BASEIMG=parrotsec-standard-3.5-armhf-rpi
 IMAGEPREFIX=$(BASEIMG)-$(BUILD_NUMBER)
 LOGFILE=$(IMAGEPREFIX).image-build-log.txt
 IMAGENAME=$(IMAGEPREFIX).img
@@ -35,10 +35,10 @@ all:
 clean:
 	rm -f $(IMAGENAME)*
 	rm -f $(LOGFILE)
-	-sudo umount -l parrotsec-rpi/*; true
+	sudo umount -l parrotsec-rpi/*; true
 	sudo dmsetup remove_all
 	sudo rm -rf parrotsec-rpi rpi-firmware
-	-sudo rm -rf rpi-firmware; true
+	sudo rm -rf rpi-firmware; true
 
 write-image:
 	sudo ./build_parrotsec_image.sh $(BLOCKDEVICE)
